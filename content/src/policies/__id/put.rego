@@ -15,7 +15,7 @@ allowed {
 }
 
 allowed {
-	input.user.id == input.resource.id
+	input.user.key == input.resource.id
 }
 
 visible {
