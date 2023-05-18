@@ -18,6 +18,10 @@ allowed {
 	input.user.key == input.resource.id
 }
 
+allowed {
+	input.user.id == input.resource.id
+}
+
 visible {
 	some index
 	data.roles[user_roles[index]].perms[path].visible
