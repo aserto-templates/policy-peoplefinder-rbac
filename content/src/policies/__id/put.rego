@@ -15,6 +15,10 @@ allowed {
 }
 
 allowed {
+	input.user.key == input.resource.id
+}
+
+allowed {
 	input.user.id == input.resource.id
 }
 
