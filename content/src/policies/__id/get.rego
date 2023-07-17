@@ -1,25 +1,13 @@
 package peoplefinder.GET.api.users.__id
 
-import input.policy.path
-import input.user.properties.roles as user_roles
+# Policy for retrieving an employee in PeopleFinder
+#
+# Getting the user is always Allowed
+#
+# The user is always Visible
+#
+# Getting the user is always Enabled 
 
-default allowed = false
-
-default visible = false
-
-default enabled = false
-
-allowed {
-	some index
-	data.roles[user_roles[index]].perms[path].allowed
-}
-
-visible {
-	some index
-	data.roles[user_roles[index]].perms[path].visible
-}
-
-enabled {
-	some index
-	data.roles[user_roles[index]].perms[path].enabled
-}
+default allowed = true
+default visible = true
+default enabled = true

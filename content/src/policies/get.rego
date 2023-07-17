@@ -1,25 +1,16 @@
 package peoplefinder.GET.api.users
 
-import input.policy.path
-import input.user.properties.roles as user_roles
+# Policy for retrieving the list of employees in PeopleFinder
+#
+# Retrieving the list of employees is Allowed if:
+# - True
+#
+# The list of employees is Visible if:
+# - True
+#
+# The list of employees is Enabled if:
+# - True
 
-default allowed = false
-
-default visible = false
-
-default enabled = false
-
-allowed {
-	some index
-	data.roles[user_roles[index]].perms[path].allowed
-}
-
-visible {
-	some index
-	data.roles[user_roles[index]].perms[path].visible
-}
-
-enabled {
-	some index
-	data.roles[user_roles[index]].perms[path].enabled
-}
+default allowed = true
+default visible = true
+default enabled = true
