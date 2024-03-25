@@ -14,16 +14,16 @@ package peoplefinder.PUT.api.users.__id
 
 import input.user.properties.roles as user_roles
 
-default allowed = false
-default visible = true
-default enabled = true
+default allowed := false
+default visible := true
+default enabled := true
 
 # Iterate over all the user's roles and return "true" if "admin" is present
-allowed {
+allowed if {
 	"admin" = user_roles[_]
 }
 
 # Check if the logged-in user is the same as the employee being updated
-allowed {
+allowed if {
 	input.user.key == input.resource.id
 }
