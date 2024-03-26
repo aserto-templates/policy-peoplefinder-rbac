@@ -13,16 +13,16 @@ package peoplefinder.POST.api.users.__id
 
 import input.user.properties.roles as user_roles
 
-default allowed = false
-default visible = true
-default enabled = false
+default allowed := false
+default visible := true
+default enabled := false
 
 # Iterate over all the user's roles and return "true" if "admin" is present
-allowed {
+allowed if {
 	"admin" = user_roles[_]
 }
 
 # Enabled is set to the result of the Allowed decision
-enabled {
+enabled if {
 	allowed
 }
