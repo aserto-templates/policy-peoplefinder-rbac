@@ -1,10 +1,25 @@
 {
   "roots": [
-    "peoplefinder"
+    "peoplefinder",
+    "roles"
   ],
   "metadata": {
     "required_builtins": {
       "builtin1": [
+       {
+          "name": "res.get",
+          "decl": {
+            "args": [
+              {
+                "type": "string"
+              }
+            ],
+            "result": {
+              "type": "any"
+            },
+            "type": "function"
+          }
+        },
         {
           "name": "ds.check",
           "decl": {
@@ -125,6 +140,19 @@
                 "type": "any"
               }
             ],
+            "result": {
+              "type": "any"
+            },
+            "type": "function"
+          }
+        }
+      ],
+      "builtin2": [
+      ],
+      "builtinDyn": [
+        {
+          "name": "res.list",
+          "decl": {
             "result": {
               "type": "any"
             },
